@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native'
+import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView } from 'react-native'
 
 
 const Recipes = ({ ingredient1, ingredient2 }) => {
@@ -35,9 +35,12 @@ const Recipes = ({ ingredient1, ingredient2 }) => {
                     <View key={index} style={styles.dataContainer}>
                         <Text style={styles.dataText}>{item.title}</Text>
                         <Image source={{ uri: item.image }} style={styles.recipeImage} />
+                        <UsedIngredients usedIngredients={item}/>
+                        <MissedIngredients missedIngredients={item}/>
                     </View>
                 ))}
             </ScrollView>
+        
         </>
 
     ]
@@ -61,9 +64,7 @@ const styles = StyleSheet.create({
         width: 240,
         height: 150,
         marginBottom: 5,
-        borderRadius: 5,
-        //aspectRatio: 1, // Para mantener la relación de aspecto de la imagen
-        //resizeMode: 'contain', // Para ajustar la imagen al contenedor sin recortarla
+        borderRadius: 5
     },
     dataText: {
         fontSize: 20

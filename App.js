@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { View, Text, TextInput, StyleSheet } from 'react-native'
+import { View, Text, TextInput, StyleSheet, StatusBar } from 'react-native'
 
 //Components
 import Recipes from './components/getRecipes';
@@ -11,6 +11,7 @@ export default App = () => {
 
   return[
     <View style = {styles.container}>
+      <StatusBar backgroundColor="#FFFFFF" barStyle='dark-content'/>
       <Text style ={styles.title}>Welcome to RecipesApp!</Text>
       <TextInput
       style={styles.textInput}
@@ -38,7 +39,8 @@ const styles = StyleSheet.create({
   title:{
     fontSize: 30,
     marginBottom:20,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    marginTop: 20
   },
   textInput:{
     borderWidth:1,
@@ -46,6 +48,6 @@ const styles = StyleSheet.create({
     width:'80%',
     padding:10,
     margin:20,
-    borderRadius: 5
-  }
+    borderRadius: 5
+  }
 })
