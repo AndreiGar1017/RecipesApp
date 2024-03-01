@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView } from 'react-native'
 
+//Components
+import MissedIngredients from './MissedIngredients';
+import UsedIngredients from './UsedIngredients';
 
 const Recipes = ({ ingredient1, ingredient2 }) => {
     const [recipe, setRecipe] = useState(null);
