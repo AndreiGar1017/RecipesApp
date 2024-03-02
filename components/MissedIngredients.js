@@ -18,7 +18,13 @@ const styles = StyleSheet.create({
         paddingTop: 10
     },
     dataText:{
-        fontSize: 20
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: '#00ff00', 
+        textShadowColor: '#00ff00', 
+        textShadowOffset: { width: 0, height: 0 },
+        textShadowRadius: 10,
+        marginBottom: 20,
     }
 })
 

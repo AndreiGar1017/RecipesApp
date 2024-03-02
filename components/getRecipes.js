@@ -27,6 +27,7 @@ const Recipes = ({ ingredient1, ingredient2 }) => {
 
     return [
         <>
+        
             <View>
                 <TouchableOpacity style={styles.button} onPress={getRecipe}>
                     <Text style={styles.buttonText}>Get Recipe</Text>
@@ -51,12 +52,16 @@ const Recipes = ({ ingredient1, ingredient2 }) => {
 
 const styles = StyleSheet.create({
     button: {
-        backgroundColor: '#9AD0C2',
-        padding: 10,
+        backgroundColor: 'transparent',
+        borderWidth: 1,
+        borderColor: '#00ff00', // Borde neon verde
+        paddingVertical: 10,
+        paddingHorizontal: 20,
         borderRadius: 5,
-    },
+        marginTop: 10,
+     },
     buttonText: {
-        color: "black"
+        color: "white"
     },
     dataContainer: {
         justifyContent: 'center',
@@ -66,11 +71,17 @@ const styles = StyleSheet.create({
     recipeImage: {
         width: 240,
         height: 150,
-        marginBottom: 5,
-        borderRadius: 5
+        marginBottom: 10,
+        borderRadius: 10
     },
     dataText: {
-        fontSize: 20
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: '#00ff00', 
+        textShadowColor: '#00ff00', 
+        textShadowOffset: { width: 0, height: 0 },
+        textShadowRadius: 10,
+        marginBottom: 20,
     }
 })
 
